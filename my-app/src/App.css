@@ -1,0 +1,100 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: #05A8AA;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+p{
+  color: #05A8AA;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen' ;
+}
+.nav-bar-ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #ffb347; */
+  background-color: #29BF12;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.nav-bar-li{
+  float: left;
+  list-style-type: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen' ;
+  border-right:1px solid white;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  /* background-color: #ffb347; */
+  background-color: #29BF12;
+  color: #F7F9F9 ;
+}
+
+.welcome {
+  text-align: center;
+  background-color: #282c34;
+}
+
+.profiles-ul{
+  list-style-type: none;
+  margin: 0;
+  /* background-color: #29BF12; */
+
+}
+
+.profiles-li{
+  list-style-type: none;
+  padding: 8px;
+  /* display: inline-block; */
+  display: inline-block;
+}
+
+.profile-container{
+  align-items: center;
+}
+
+.profile-pictures{
+  /* display: block; */
+  width: 200px;
+  /* height: auto; */
+  /* display:inline-block; */
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 15px;
+}
