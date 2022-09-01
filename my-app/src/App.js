@@ -24,6 +24,7 @@ import {
 } from '@react-google-maps/api'
 
 import { useRef, useState } from 'react'
+import { useForceUpdate } from 'framer-motion';
 
 
 function NavBar(){
@@ -45,20 +46,27 @@ export default function App() {
     libraries: ['places'],
   })
   const [locationString, setLocation] = useState('')
-  const latitude = '123';
+  const [submitted, setSubmit] = useState('')
 
   /** @type React.MutableRefObject<HTMLInputElement> */
   const originRef = useRef()
   const destiantionRef = useRef()
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
 
-  
+  // async function submitted(){
+  //   setLocation(String(originRef))
+  // }
+
   if (!isLoaded) {
     return <p>didn't load</p>
   }
 
   async function submitLocation()
   {
-    originRef.current.focus();
+    // originRef.current.focus();
+    setLocation(String(originRef.current.value))
   }
   return (
     // <div className="App">
@@ -99,11 +107,12 @@ export default function App() {
         <Autocomplete>
             <Input type='text' placeholder='Current Location' ref={originRef}/>
           </Autocomplete>
-        {/* <p>{originRef}</p> */}
+        {/* <p>{originRef.current.value}</p> */}
         <Button colorScheme='pink' type='submit' onClick={submitLocation}>Submit</Button>
         <APIHandling
-          location_query =  "42906 Fairlee Drive, Lancaster, CA, USA"
+          location_query =  {locationString}//{String(originRef.current.value)}
         />
+        {locationString}
       <p></p>
       </header>
     </div>
