@@ -23,7 +23,7 @@ import {
   Autocomplete
 } from '@react-google-maps/api'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useForceUpdate } from 'framer-motion';
 
 
@@ -68,6 +68,7 @@ export default function App() {
     // originRef.current.focus();
     setLocation(String(originRef.current.value))
   }
+  
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -110,7 +111,7 @@ export default function App() {
         {/* <p>{originRef.current.value}</p> */}
         <Button colorScheme='pink' type='submit' onClick={submitLocation}>Submit</Button>
         <APIHandling
-          location_query =  {locationString}//{String(originRef.current.value)}
+          locationQuery =  {locationString}//{String(originRef.current.value)}
         />
         {locationString}
       <p></p>
